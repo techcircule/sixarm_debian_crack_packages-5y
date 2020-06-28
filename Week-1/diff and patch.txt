@@ -63,9 +63,8 @@ Patch is useful for applying file differences. See the below example, which comp
                                                             Hello World
 
                                                             It's a wonderful day!
-                                             --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------                                                            
+                                             
 There are some other interesting patch and diff commands such as patch -p1, diff -r !
 
 Check them out in the following references:
