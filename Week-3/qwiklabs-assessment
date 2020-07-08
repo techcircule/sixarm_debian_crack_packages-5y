@@ -1,0 +1,100 @@
+Using username "student-02-1f5747cf0c18".
+Authenticating with public key "imported-openssh-key"
+Linux linux-instance 4.9.0-12-amd64 #1 SMP Debian 4.9.210-1+deb9u1 (2020-06-07)                                                                                                              x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Wed Jul  8 11:15:23 2020 from 49.32.24.30
+student-02-1f5747cf0c18@linux-instance:~$ git clone https://github.com/techcircule/git-github-practice.git
+fatal: destination path 'git-github-practice' already exists and is not an empty directory.
+student-02-1f5747cf0c18@linux-instance:~$ cd git-github-practice
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$ git config --global user.name "Name"
+warning: user.name has multiple values
+error: cannot overwrite multiple values with a single value
+       Use a regexp, --add or --replace-all to change user.name.
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$ git user.name
+git: 'user.name' is not a git command. See 'git --help'.
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$ nano README.md
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   README.md
+
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$ git commit
+[master 17c8391] I am editing the README file.
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$ git push origin master
+Username for 'https://github.com': techcircule
+Password for 'https://techcircule@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/techcircule/git-github-practice.git/'
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$ git push origin master
+Username for 'https://github.com': techcircule
+Password for 'https://techcircule@github.com':
+Counting objects: 3, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 355 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/techcircule/git-github-practice.git
+   30059c5..17c8391  master -> master
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$ nano example.py
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$ git add example.py
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$ git commit
+[master d242ab7] created and example.py script
+ 1 file changed, 4 insertions(+)
+ create mode 100644 example.py
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$ git push origin master
+Username for 'https://github.com': git push origin master
+Password for 'https://git push origin master@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/techcircule/git-github-practice.git/'
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$ git push origin master
+Username for 'https://github.com': techcircule
+Password for 'https://techcircule@github.com':
+To https://github.com/techcircule/git-github-practice.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/techcircule/git-github-practice.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$ git pull origin master
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/techcircule/git-github-practice
+ * branch            master     -> FETCH_HEAD
+   17c8391..f6ac2ba  master     -> origin/master
+Merge made by the 'recursive' strategy.
+ remote-repo-test | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 remote-repo-test
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$ git push origin master
+Username for 'https://github.com': techcircule
+Password for 'https://techcircule@github.com':
+Counting objects: 5, done.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 674 bytes | 0 bytes/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/techcircule/git-github-practice.git
+   f6ac2ba..8d65731  master -> master
+student-02-1f5747cf0c18@linux-instance:~/git-github-practice$
